@@ -18,13 +18,13 @@ body {
 	padding-right: 6rem; */
 	display: grid;
 
-	grid-template-columns: repeat(auto-fit 1fr);
-	/* grid-template-rows: repeat(5, minmax(300px, 1fr)); */
+	/* grid-template-columns: repeat(auto-fit, 1fr); */
+	grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
 
 	row-gap: 1rem;
 	column-gap: 1rem;
-	align-items: center;
-	justify-items: center;
+	/* align-items: center;  */
+	justify-items: center; 
 }
 
 .Grid_Item {
