@@ -60,7 +60,7 @@ body {
 }
 .Center_IMG img {
 	width: 100%;
-	max-width: 10rem;
+	max-width: 25rem;
 	display: block;
 	border-radius: 1rem;
 	/* border: 5px solid blue; */
@@ -87,12 +87,12 @@ h1 {
 	/* display: block; */
 	background-color: transparent;
 	padding: 0;
-	margin: 1rem;
+	margin: 0.8rem;
 	text-align: center;
 }
 .Button_Prev {
 	width: 8rem;
-	font-size: 2rem;
+	font-size: 1.6rem;
 	border-radius: 0.5rem;
 	cursor: pointer;
 	background-color: orange;
@@ -105,7 +105,7 @@ h1 {
 }
 .Button_Forw {
 	width: 8rem;
-	font-size: 2rem;
+	font-size: 1.6rem;
 	margin-left: 5rem;
 	border-radius: 0.5rem;
 	cursor: pointer;
