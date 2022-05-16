@@ -210,11 +210,11 @@ body {
 	margin-top: 3rem;
 }
 .About_Content .Personals .Skills {
-	border: 3px solid black;
+	/* border: 3px solid black; */
 	flex-basis: 40%;
 }
 .About_Content .Personals .Contact_Info {
-	border: 3px solid orange;
+	/* border: 3px solid orange; */
 	flex-basis: 60%;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
@@ -224,7 +224,7 @@ body {
 .Contact_Info .Grid_Item {
 	border-bottom: 1px solid var(--Underlines);
 	padding: 0.8rem 0.8rem 1rem 0.8rem;
-	border: 3px solid red;
+	/* border: 3px solid red; */
 }
 
 .Contact_Info .Grid_Item h4 {
