@@ -25,15 +25,15 @@ function ButtonsDisable() {
 	} else Button_Forw.disabled = true;
 }
 
-// function PicturesSizing() {
-// 	if (Currently_Selected >= 11) {
-// 		Center_Image["max-width"] = "42rem";
-// 		console.log(Center_Image["max-width"]);
-// 	} else {
-// 		Center_Image["max-width"] = "45rem";
-// 		console.log(Center_Image["max-width"]);
-// 	}
-// }
+function PicturesSizing() {
+	if (Currently_Selected >= 11) {
+		Center_Image["max-width"] = "42rem";
+		console.log(Center_Image["max-width"]);
+	} else {
+		Center_Image["max-width"] = "45rem";
+		console.log(Center_Image["max-width"]);
+	}
+}
 
 function OpenCenter_IMG(Images) {
 	Selecting(Images.className);
