@@ -112,9 +112,9 @@ body {
 	margin-top: 3rem;
 	border-bottom: 1px solid var(--Underlines);
 }
-.Aside nav li a:hover{
+.Aside nav li a:hover {
 	color: var(--TitlesColor);
-	}
+}
 .Aside nav li a {
 	padding: 1rem 1rem;
 	color: var(--NavFonts);
@@ -143,8 +143,10 @@ body {
 	font-size: 2rem;
 	margin: 1.5rem 0;
 }
+.About .About_Title h1 {
+	margin: 2rem 1rem 5rem 1rem;
+}
 .About .About_Title h1 span {
-	margin-bottom: 5rem;
 	/* border: 3px solid blue; */
 	font-size: 5rem;
 	columns: black;
@@ -155,29 +157,30 @@ body {
 .About .About_Title h1 span::before {
 	content: "";
 	position: absolute;
-	width: 80px;
-	height: 90px;
-	border-bottom: 5px solid var(--TitlesColor);
+	width: 60px;
+	height: 60px;
+	/* border-bottom: 5px solid var(--TitlesColor); */
 	border-left: 5px solid var(--TitlesColor);
 	border-top: 5px solid var(--TitlesColor);
-	border-radius: 1rem 0 0 1rem;
-	top: 5px;
-	left: -15px;
+	border-radius: 0.6rem 0 00rem;
+	top: 0px;
+	left: -20px;
 }
 .About .About_Title h1 span::after {
 	content: "";
 	position: absolute;
-	width: 80px;
-	height: 90px;
+	width: 60px;
+	height: 60px;
 	border-bottom: 5px solid var(--TitlesColor);
 	border-right: 5px solid var(--TitlesColor);
-	border-top: 5px solid var(--TitlesColor);
-	border-radius: 0rem 1rem 1rem 0rem;
-	top: 5px;
-	right: -15px;
+	/* border-top: 5px solid var(--TitlesColor); */
+	border-radius: 0rem 0rem 1rem 0rem;
+	bottom: 0px;
+	right: -20px;
 }
 .About_Content {
 	margin-top: 10rem;
+	margin-left: 1rem;
 	display: flex;
 	flex-direction: column;
 	/* border: 3px solid black; */
@@ -204,24 +207,24 @@ body {
 .About_Content .Personals {
 	/* border: 3px solid red; */
 	display: flex;
-	/* flex: 0 0 50%; */
 	margin-top: 3rem;
 }
 .About_Content .Personals .Skills {
-	/* border: 3px solid black; */
+	border: 3px solid black;
 	flex-basis: 40%;
 }
 .About_Content .Personals .Contact_Info {
-	/* border: 3px solid orange; */
+	border: 3px solid orange;
 	flex-basis: 60%;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
+
 	align-items: center;
 }
 .Contact_Info .Grid_Item {
 	border-bottom: 1px solid var(--Underlines);
 	padding: 0.8rem 0.8rem 1rem 0.8rem;
-	/* border: 3px solid red; */
+	border: 3px solid red;
 }
 
 .Contact_Info .Grid_Item h4 {
