@@ -1,0 +1,318 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	outline: none;
+	text-decoration: none;
+	list-style: none;
+}
+:root {
+	--TitlesColor: #ec1839;
+	--AsideBCKG: rgb(238, 232, 232);
+	--NavFonts: #302e4d;
+	--Underlines: rgb(200, 190, 190);
+	--HeaderBCKG: rgb(210, 202, 194);
+	/* --TitlesColor: #01403a;
+	--FontsColor: #027368;
+	--DatesColor: rgb(145, 200, 140);
+	--BckgBody: #ffffff;
+	--Borders: #01403a;
+
+	--BckgMainMiddle: #04bfad;
+	--BckgMainSides: rgb(2, 137, 147); */
+}
+::before,
+::after {
+	box-sizing: border-box;
+}
+body {
+	font-family: "ar", Times, serif;
+	font-size: 1.1rem;
+	line-height: 2rem;
+	background-color: black;
+}
+
+/* section {
+	min-height: 100vh;
+	display: block;
+} */
+
+.MainFlexContainer {
+	display: flex;
+	width: 80%;
+	min-height: 100vh;
+	flex-direction: row;
+	/* border: 5px solid red; */
+	background-color: var(--HeaderBCKG);
+	margin: 0 auto;
+}
+
+/* ASIDE START */
+
+.Aside {
+	/* border: 3px solid blue; */
+	background-color: var(--AsideBCKG);
+	border-right: 1px solid var(--Underlines);
+	flex-basis: 15%;
+	/* z-index: 10; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.Aside .logo {
+	font-size: 2rem;
+	text-transform: capitalize;
+	position: absolute;
+	top: 4rem;
+}
+.Aside .logo a {
+	color: black;
+	font-size: 2rem;
+
+	padding: 10px 20px;
+	letter-spacing: 0.5rem;
+	position: relative;
+	/* border: 2px solid blue; */
+}
+.Aside .logo a::before {
+	content: "";
+	position: absolute;
+	width: 1.3rem;
+	height: 1.3rem;
+	border-bottom: 3px solid var(--TitlesColor);
+	border-left: 3px solid var(--TitlesColor);
+	border-radius: 0 0 0 0.3rem;
+	bottom: 0;
+	left: 0;
+}
+.Aside .logo a::after {
+	content: "";
+	position: absolute;
+	width: 1.3rem;
+	height: 1.3rem;
+	border-top: 3px solid var(--TitlesColor);
+	border-right: 3px solid var(--TitlesColor);
+	border-radius: 0 0.3rem 0 0rem;
+	top: 0;
+	right: 0;
+}
+
+.Aside .logo a span {
+	color: black;
+	font-family: "Indie Flower", cursive;
+	font-size: 2.2rem;
+}
+
+.Aside nav li {
+	/* border: 2px solid blue; */
+	font-size: 1.5rem;
+	font-weight: 600;
+	margin-top: 3rem;
+	border-bottom: 1px solid var(--Underlines);
+}
+.Aside nav li a:hover {
+	color: var(--TitlesColor);
+}
+.Aside nav li a {
+	padding: 1rem 1rem;
+	color: var(--NavFonts);
+}
+.Aside nav li a.ActiveNav {
+	color: var(--TitlesColor);
+}
+.Aside nav li a i {
+	margin-right: 0.8rem;
+}
+/* ASIDE END */
+
+/* MainContainer Start */
+.MainContainer {
+	/* border: 3px solid blue; */
+	display: none;
+	flex-basis: 85%;
+}
+.About {
+	/* border: 3px solid black; */
+	margin-top: 1rem;
+	font-size: 2rem;
+	margin: 1.5rem 0;
+}
+/* MainContainer END */
+.About {
+	margin-top: 5rem;
+	/* border: 3px solid red; */
+	padding: 1rem;
+	height: 100vh;
+}
+.About .About_Title h1 span {
+	margin-bottom: 5rem;
+	/* border: 3px solid blue; */
+	font-size: 5rem;
+	columns: black;
+	font-weight: 500;
+	/* font-family: ; */
+	position: relative;
+}
+.About .About_Title h1 span::before {
+	content: "";
+	position: absolute;
+	width: 80px;
+	height: 90px;
+	border-bottom: 5px solid var(--TitlesColor);
+	border-left: 5px solid var(--TitlesColor);
+	border-top: 5px solid var(--TitlesColor);
+	border-radius: 1rem 0 0 1rem;
+	top: 5px;
+	left: -15px;
+}
+.About .About_Title h1 span::after {
+	content: "";
+	position: absolute;
+	width: 80px;
+	height: 90px;
+	border-bottom: 5px solid var(--TitlesColor);
+	border-right: 5px solid var(--TitlesColor);
+	border-top: 5px solid var(--TitlesColor);
+	border-radius: 0rem 1rem 1rem 0rem;
+	top: 5px;
+	right: -15px;
+}
+.About_Content {
+	margin-top: 10rem;
+	display: flex;
+	flex-direction: column;
+	/* border: 3px solid black; */
+}
+.About_Content h2 {
+	font-size: 2.8rem;
+	font-weight: 300;
+	margin-bottom: 2rem;
+}
+.About_Content h2 span {
+	font-family: "Indie Flower", cursive;
+	color: var(--TitlesColor);
+	font-weight: 500;
+}
+
+.About_Text {
+	font-size: 1.5rem;
+	font-weight: 300;
+	color: var(--NavFonts);
+	margin-bottom: 2rem;
+
+	/* border: 3px solid blue; */
+}
+.About_Content .Personals {
+	/* border: 3px solid red; */
+	display: flex;
+	/* flex: 0 0 50%; */
+	margin-top: 3rem;
+}
+.About_Content .Personals .Skills {
+	/* border: 3px solid black; */
+	flex-basis: 40%;
+}
+.About_Content .Personals .Contact_Info {
+	/* border: 3px solid orange; */
+	flex-basis: 60%;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	align-items: center;
+}
+.Contact_Info .Grid_Item {
+	border-bottom: 1px solid var(--Underlines);
+	padding: 0.8rem 0.8rem 1rem 0.8rem;
+	/* border: 3px solid red; */
+}
+
+.Contact_Info .Grid_Item h4 {
+	display: inline;
+	font-weight: 600;
+	/* letter-spacing: 2px; */
+	/* margin-left: 1px; */
+	/* border: 3px solid red; */
+}
+.Contact_Info .Grid_Item p {
+	display: inline;
+	/* border: 3px solid red; */
+	font-size: 1.3rem;
+	margin-left: 0.5rem;
+}
+
+/* .Skills {
+	border: 3px solid red;
+} */
+.Skills h4,
+.FatLine {
+	/* border: 3px solid red; */
+	margin: 1rem 1.5rem 1.5rem 1.5rem;
+}
+
+.Skills li .FatLine {
+	/* border: 3px solid red; */
+	background-color: var(--Underlines);
+	height: 15px;
+	border-radius: 1rem;
+	width: 90%;
+	position: relative;
+}
+.Skills .FatLine_Fill {
+	position: absolute;
+	left: 0;
+	top: 0;
+	border-radius: 1rem;
+	height: 100%;
+	border-radius: 4px;
+	background-color: var(--TitlesColor);
+}
+/* Download CV BUTTON START*/
+.CV_BTN {
+	display: inline;
+	/* border: 3px solid red; */
+	padding: 1rem;
+	margin-left: 5rem;
+	margin-top: 0.6rem;
+	border-radius: 2rem;
+	background-color: var(--TitlesColor);
+	font-size: 1.5rem;
+	font-family: "Times New Roman", Times, serif;
+	text-align: left;
+	border-style: none;
+	cursor: pointer;
+}
+.CV_BTN:hover {
+	transform: scale(0.9);
+	transition: all 0.5s ease;
+}
+
+.CV_BTN a {
+	color: var(--AsideBCKG);
+}
+
+.CV_BTN a i {
+	margin-right: 0.8rem;
+}
+/* Download CV BUTTON END */
+
+
+
+.Not_Ready_Yet{
+	font-size: 1.9rem;
+	justify-content: center;
+	margin-top: 30rem;
+	align-items: center;
+	flex-basis: 85%;
+	
+}
+.Not_Ready_Yet h1{
+	font-family: "Indie Flower", cursive;
+	text-align: center;
+	
+}
+.Not_Ready_Yet p {
+	font-size: 2rem;
+	justify-content: center;
+	margin-top: 1rem;
+	text-align: center;
+}

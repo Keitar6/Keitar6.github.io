@@ -1,0 +1,168 @@
+/* * {
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+} */
+
+:root {
+	--TitlesColor: #ec1839;
+	--AsideBCKG: rgb(238, 232, 232);
+	--NavFonts: #302e4d;
+	--Underlines: rgb(200, 190, 190);
+	--HeaderBCKG: rgb(210, 202, 194);
+}
+body {
+	display: flex;
+	justify-content: center; /*ustawia w jednej osi */
+	align-items: center; /*ustawia w drugiej osi */
+	min-height: 100vh;
+	font-family: "Montserrat", sans-serif;
+	background-color: var(--bg-color);
+	padding: 0;
+}
+
+.Wrapper {
+	width: 800px;
+	background-color: var(--bgWrap-color);
+	box-shadow: 00px 00px 100px var(--box-color);
+	border-radius: 100px 100px 0px 0px;
+	position: relative;
+	padding: 0;
+	/* border: 3px solid black; */
+}
+
+.Header {
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-start;
+	flex-direction: column;
+	height: 400px;
+	padding: 20px 30px;
+	font-family: "Dancing script", cursive;
+	background-image: url("https://cdn.pixabay.com/photo/2022/02/23/05/10/tiramisu-7030032_960_720.jpg");
+	background-position: center;
+	z-index: 0;
+	border-radius: 80px 80px 0px 0px;
+}
+
+h1 {
+	color: var(--heading-color);
+	margin-bottom: 10px;
+	margin-left: 0;
+	font-size: 60px;
+}
+
+.Search {
+	padding: 10px 20px;
+	margin-bottom: 1px;
+	width: 94%;
+	font-size: 20px;
+	border-radius: 10px;
+	background-color: var(--bg-color);
+	filter: opacity(70%);
+	font-family: "Times New Roman", Times, serif;
+	color: var(--heading2-color);
+}
+
+.drink_list {
+	padding: 0px 20px 40px 40px;
+	font-family: "Times New Roman", Times, serif;
+}
+
+.Header_List {
+	padding: 30px 0;
+	font-size: 40px;
+	font-style: inherit;
+	color: var(--heading2-color);
+}
+[data-mode="light"] {
+	/*opisanie atrybutu który wczesniej nadalismy */
+	--bg-color: rgb(238, 232, 232);
+	--bgWrap-color: rgb(255, 255, 255); /*background*/
+	--heading-color: beige;
+	--heading2-color: rgb(0, 0, 0);
+	--text-color: rgb(65, 65, 65);
+	--link-color: rgb(29, 3, 192);
+	--btn-color: rgb(35, 32, 32);
+	--box-color: rgb(0, 0, 0);
+	--navyBackgr: antiquewhite;
+	--navyFont: rgb(0, 0, 0);
+	--navyBorder: rgb(0, 0, 0);
+	--navyHoverFont: rgb(140, 0, 255);
+	--navyHoverBackground: rgb(231, 148, 148);
+}
+[data-mode="dark"] {
+	/*opisanie atrybutu który wczesniej nadalismy */
+	--bg-color: rgb(0, 0, 0); /*background*/
+	--bgWrap-color: rgb(0, 0, 0); /*background*/
+	--heading-color: rgb(102, 102, 102);
+	--heading2-color: rgb(255, 255, 255);
+	--text-color: rgb(255, 255, 255);
+	--link-color: rgb(0, 255, 128);
+	--btn-color: rgb(255, 255, 255);
+	--box-color: rgb(255, 255, 255);
+	--navyBackgr: rgb(86, 84, 84);
+	--navyFont: rgb(0, 0, 0);
+	--navyBorder: rgb(255, 255, 255);
+	--navyHoverFont: rgb(231, 148, 148);
+	--navyHoverBackground: rgb(140, 0, 255);
+}
+ul {
+	padding-bottom: 30px;
+	font-size: 20px;
+	list-style: none;
+}
+li {
+	padding: 8px 20px;
+	border-bottom: 1px solid var(--bg-color);
+	color: var(--heading2-color);
+}
+
+li:last-child {
+	border-bottom: 0;
+}
+button {
+	position: absolute;
+	top: 500px;
+	right: 180px;
+	width: 60px;
+	height: 60px;
+	cursor: pointer;
+	border: 1px solid var(--box-color);
+	border-radius: 50px 50px 50px 50px;
+	background-color: var(--box-color);
+}
+nav ul {
+	padding: 0;
+	/* border: 3px solid black; */
+}
+
+nav ul li {
+	font-size: 1.5rem;
+	font-weight: bold;
+	background-color: var(--navyBackgr);
+	border-radius: 15px;
+	text-align: center;
+	border: 5px solid black;
+	margin: 1rem;
+	display: block;
+	padding: 0;
+}
+nav ul li:last-child {
+	border: 5px solid var(--navyBorder);
+}
+
+a {
+	font-family: "Times New Roman", Times, serif;
+	color: var(--navyFont);
+	text-decoration: none;
+	border-radius: 15px;
+	/* border: 5px dashed rgb(255, 0, 0); */
+	margin: 0;
+	padding: 0;
+	display: block;
+}
+a:hover {
+	background-color: var(--navyHoverBackground);
+	color: var(--navyHoverFont);
+}

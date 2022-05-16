@@ -1,0 +1,215 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	outline: none;
+	text-decoration: none;
+	list-style: none;
+}
+:root {
+	--TitlesColor: #ec1839;
+	--AsideBCKG: rgb(238, 232, 232);
+	--NavFonts: #302e4d;
+	--Underlines: rgb(200, 190, 190);
+	--HeaderBCKG: rgb(210, 202, 194);
+	/* --TitlesColor: #01403a;
+	--FontsColor: #027368;
+	--DatesColor: rgb(145, 200, 140);
+	--BckgBody: #ffffff;
+	--Borders: #01403a;
+
+	--BckgMainMiddle: #04bfad;
+	--BckgMainSides: rgb(2, 137, 147); */
+}
+::before,
+::after {
+	box-sizing: border-box;
+}
+body {
+	font-family: "ar", Times, serif;
+	font-size: 1.1rem;
+	line-height: 2rem;
+	background-color: black;
+}
+
+/* section {
+	min-height: 100vh;
+	display: block;
+} */
+
+.MainFlexContainer {
+	display: flex;
+	width: 80%;
+	flex-direction: row;
+	/* border: 5px solid red; */
+	background-color: var(--HeaderBCKG);
+	margin: 0 auto;
+}
+
+/* ASIDE START */
+
+.Aside {
+	/* border: 3px solid blue; */
+	background-color: var(--AsideBCKG);
+	border-right: 1px solid var(--Underlines);
+	flex-basis: 15%;
+	/* z-index: 10; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.Aside .logo {
+	font-size: 2rem;
+	text-transform: capitalize;
+	position: absolute;
+	top: 4rem;
+}
+.Aside .logo a {
+	color: black;
+	font-size: 2rem;
+
+	padding: 10px 20px;
+	letter-spacing: 0.5rem;
+	position: relative;
+	/* border: 2px solid blue; */
+}
+.Aside .logo a::before {
+	content: "";
+	position: absolute;
+	width: 1.3rem;
+	height: 1.3rem;
+	border-bottom: 3px solid var(--TitlesColor);
+	border-left: 3px solid var(--TitlesColor);
+	border-radius: 0 0rem 0 0.3rem;
+
+	bottom: 0;
+	left: 0;
+}
+.Aside .logo a::after {
+	content: "";
+	position: absolute;
+	width: 1.3rem;
+	height: 1.3rem;
+	border-top: 3px solid var(--TitlesColor);
+	border-right: 3px solid var(--TitlesColor);
+	border-radius: 0 0.3rem 0 0rem;
+	top: 0;
+	right: 0;
+}
+
+.Aside .logo a span {
+	color: black;
+	font-family: "Indie Flower", cursive;
+	font-size: 2.2rem;
+}
+
+.Aside nav li {
+	/* border: 2px solid blue; */
+	font-size: 1.5rem;
+	font-weight: 600;
+	margin-top: 3rem;
+	border-bottom: 1px solid var(--Underlines);
+}
+.Aside nav li a:hover{
+	color: var(--TitlesColor);
+	}
+.Aside nav li a {
+	padding: 1rem 1rem;
+	color: var(--NavFonts);
+}
+.Aside nav li a.ActiveNav {
+	color: var(--TitlesColor);
+}
+.Aside nav li a i {
+	margin-right: 0.8rem;
+}
+/* ASIDE END */
+
+/* MainContainer Start */
+.MainContainer {
+	/* border: 3px solid black; */
+	flex-basis: 85%;
+}
+header {
+	width: 96%;
+	min-height: 100vh;
+	margin: auto;
+	display: flex;
+	flex-direction: row;
+	/* border: .5rem solid red; */
+	align-items: center;
+	/* justify-content: center; */
+}
+.HomePage_Text {
+	flex: 0 0 60%;
+	max-width: 60%;
+	margin-left: 2rem;
+	margin-bottom: 9rem;
+	/* border: 3px solid black; */
+}
+.HomePage_Text .PS {
+	color: var(--TitlesColor);
+	font-size: 1.4rem;
+	font-weight: bold;
+	/* border: 3px solid black; */
+}
+
+.Home_Header_Image .Home_Image {
+	flex: 0 0 40%;
+	/* max-width: 100%; */
+	width: 20rem;
+	/* border: 10px solid var(--TitlesColor);
+	border-radius: 0 0 30rem 30rem; */
+	margin: 5rem;
+	text-align: center;
+	position: relative;
+	/* border: 1px solid var(--NavFonts); */
+	box-shadow: 0rem 0rem 1rem var(--NavFonts);
+	border-radius: 1rem;
+}
+.Header_Image {
+	/* border: 5px solid red; */
+	position: relative;
+}
+.Header_Image::before {
+	content: "";
+	position: absolute;
+	width: 80px;
+	height: 80px;
+	border-top: 10px solid var(--TitlesColor);
+	border-left: 10px solid var(--TitlesColor);
+	border-radius: 1rem 0rem 0rem 0rem;
+	top: 20px;
+	left: -30px;
+}
+.Header_Image::after {
+	content: "";
+	position: absolute;
+	width: 80px;
+	height: 80px;
+	border-bottom: 10px solid var(--TitlesColor);
+	border-right: 10px solid var(--TitlesColor);
+	border-radius: 0rem 0rem 1rem 0rem;
+	bottom: 20px;
+	right: -30px;
+}
+.Greetings,
+.Job {
+	/* border: 3px solid black; */
+	margin-top: 1rem;
+	font-size: 2rem;
+	margin: 1.5rem 0;
+}
+.Greetings cite {
+	display: block;
+	font-family: "Indie Flower", cursive;
+	color: var(--TitlesColor);
+	margin-top: 1rem;
+}
+
+.Job span {
+	font-family: "Indie Flower", cursive;
+	color: var(--TitlesColor);
+}
+/* MainContainer END */
