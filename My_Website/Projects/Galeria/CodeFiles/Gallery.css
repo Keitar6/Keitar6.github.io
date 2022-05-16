@@ -31,7 +31,7 @@ body {
 	/* border: 5px solid pink; */
 	margin: 0;
 	width: 100%;
-	max-width: 15rem;
+	max-width: 12rem;
 	/* height: 100%; */
 	cursor: pointer;
 	border-radius: 1rem;
@@ -60,7 +60,7 @@ body {
 }
 .Center_IMG img {
 	width: 100%;
-	max-width: 25rem;
+	max-width: 27rem;
 	display: block;
 	border-radius: 1rem;
 	/* border: 5px solid blue; */
