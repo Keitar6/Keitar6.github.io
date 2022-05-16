@@ -9,7 +9,7 @@ body {
 	background-color: aqua;
 }
 .Grid_Container {
-	/* border: 10px solid blue; */
+	border: 10px solid blue;
 	/* background-image: url("../Images_Tenis/BackGround_Grid.png"); */
 	width: 80%;
 	max-width: 100rem;
@@ -28,7 +28,7 @@ body {
 }
 
 .Grid_Item {
-	/* border: 5px solid pink; */
+	border: 5px solid pink;
 	margin: 0;
 	width: 100%;
 	max-width: 12rem;
