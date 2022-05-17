@@ -7,6 +7,7 @@
 	list-style: none;
 }
 :root {
+	box-sizing: border-box;
 	--TitlesColor: #ec1839;
 	--AsideBCKG: rgb(238, 232, 232);
 	--NavFonts: #302e4d;
@@ -160,8 +161,11 @@ body {
 	bottom: 0px;
 	right: -1.3rem;
 }
+.Portfolio_Title {
+	flex: 0 0 15%;
+}
 
-.Portfolio_Content h2{
+.Portfolio_Content h2 {
 	/* border: 3px solid blue; */
 	font-size: 2.8rem;
 	font-weight: 300;
@@ -174,27 +178,33 @@ body {
 	font-weight: 500;
 }
 
-.Projects{
+.Projects {
 	/* border: 3px solid blue; */
-	flex: 0 0 50%;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	align-items:space-between;
-	justify-items: center;
-	grid-row-gap: 2rem;
-	grid-column-gap: 2rem;
+	align-items: center;
+	/* justify-items: center; */
+	gap: 1rem 1rem;
 }
 
-.Screenshots{
-	border: 3px solid var(--NavFonts);
+.Screenshots {
+	/* border: 3px solid var(--NavFonts); */
 	border-radius: 1rem;
-	width: 50%;
+	width: 60%;
 }
-.Screenshots img{
+.Screenshots img {
 	width: 100%;
+	/* border: 3px solid var(--NavFonts); */
 	border-radius: 1rem;
 }
-.Drink_Search{
+.Screenshots a {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	/* border: 3px solid var(--NavFonts); */
+	border-radius: 1rem;
+}
+.Drink_Search {
 	grid-row: span 2;
 }
 /* MainContainer END */
