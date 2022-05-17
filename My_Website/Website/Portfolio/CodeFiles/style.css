@@ -122,6 +122,8 @@ body {
 }
 .Portfolio {
 	/* border: 3px solid red; */
+	display: flex;
+	flex-direction: column;
 	padding: 2rem;
 	height: 100vh;
 	font-size: 2rem;
@@ -172,25 +174,27 @@ body {
 	font-weight: 500;
 }
 
+.Projects{
+	/* border: 3px solid blue; */
+	flex: 0 0 50%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items:space-between;
+	justify-items: center;
+	grid-row-gap: 2rem;
+	grid-column-gap: 2rem;
+}
 
-
-
+.Screenshots{
+	border: 3px solid var(--NavFonts);
+	border-radius: 1rem;
+	width: 50%;
+}
+.Screenshots img{
+	width: 100%;
+	border-radius: 1rem;
+}
+.Drink_Search{
+	grid-row: span 2;
+}
 /* MainContainer END */
-
-.Not_Ready_Yet {
-	font-size: 1.9rem;
-	justify-content: center;
-	margin-top: 30rem;
-	align-items: center;
-	flex: 0 0 85%;
-}
-.Not_Ready_Yet h1 {
-	font-family: "Indie Flower", cursive;
-	text-align: center;
-}
-.Not_Ready_Yet p {
-	font-size: 2rem;
-	justify-content: center;
-	margin-top: 1rem;
-	text-align: center;
-}
