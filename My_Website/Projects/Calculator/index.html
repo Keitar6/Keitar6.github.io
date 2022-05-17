@@ -5,83 +5,118 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Kavivanar|Open+Sans" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Calculator</title>
+    <link rel="shortcut icon" href="../../Website/HomePage/img/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
-    <div class="Wrapper">
-        <section class="screen">
-            0
-        </section>
+    <div class="Wrapper MainFlexContainer">
+        <div class="Aside">
+            <div class="logo"><a href="https://www.youtube.com/watch?v=qHm9MG9xw1o"
+                    target="_blank"><span>M.</span>Space</a>
 
-        <section class="calc-buttons">
-            <table>
-                <tr class="calc-button-row">
-                    <td colspan="2" class="buttons">
-                        <button class="calc-button double">C</button>
-                    </td>
-                    <td class="buttons">
-                        <button class="calc-button">&LeftArrow;</button>
-                    </td>
-                    <td class="function_buttons">
-                        <button class="calc-button">&divide;</button>
-                    </td>
+            </div>
 
-                </tr>
-                <tr class="calc-button-row">
-                    <td class="buttons">
-                        <button class="calc-button">7</button>
-                    </td>
-                    <td class="buttons">
-                        <button class="calc-button">8</button>
-                    </td>
-                    <td class="buttons">
-                        <button class="calc-button">9</button>
-                    </td>
-                    <td class="function_buttons">
-                        <button class="calc-button">&times;</button>
-                    </td>
-                    </trcalc-button>
-                <tr class="calc-button-row">
-                    <td class="buttons">
-                        <button class="calc-button">4</button>
-                    </td>
-                    <td class="buttons">
-                        <button class="calc-button">5</button>
-                    </td>
-                    <td class="buttons">
-                        <button class="calc-button">6</button>
-                    </td>
-                    <td class="function_buttons">
-                        <button class="calc-button">&minus;</button>
-                    </td>
-                </tr>
-                <tr class="calc-button-row">
-                    <td class="buttons">
-                        <button class="calc-button">1</button>
-                    </td>
-                    <td class="buttons">
-                        <button class="calc-button">2</button>
-                    </td>
-                    <td class="buttons">
-                        <button class="calc-button">3</button>
-                    </td>
-                    <td class="function_buttons">
-                        <button class="calc-button">&plus;</button>
-                    </td>
-                </tr>
-                <tr class="calc-button-row">
-                    <td colspan="3" class="buttons">
-                        <button class="calc-button triple">0</button>
-                    </td>
-                    <td class="function_buttons">
-                        <button class="calc-button">&equals;</button>
-                    </td>
-                </tr>
-            </table>
-        </section>
+            <!-- Nav Bar Start -->
+            <nav>
+                <ul>
+                    <li> <a href="../../../Website/HomePage/CodeFiles/index.html" class="Hompage"><i
+                                class="fa fa-fw fa-home"></i>Home</a></li>
+                    <li> <a href="../../../Website/Portfolio/CodeFiles/index.html" class="Portfolio ActiveNav"><i
+                                class="fa fa-fw fa-briefcase"></i>Back</a></li>
+                    <li> <a href="../../../Website/About/CodeFiles/index.html" class="About_Nav"><i
+                                class="fa fa-fw fa-user"></i>About</a></li>
+                    <li> <a href="../../../Website/Contact/CodeFiles/index.html" class="Contact"><i
+                                class="fa fa-fw fa-comments"></i>Contact</a></li>
+                </ul>
+            </nav>
+            <!-- Nav Bar End -->
+        </div>
+        <div class=MainContent>
+            <header>
+                <h1><span><em>Calculator</em> </span>&rarr; But it is still better to just count yourself </h1>
+            </header>
+
+            <div class="Calculator">
+
+                <section class="screen">
+                    0
+                </section>
+
+                <section class="calc-buttons">
+
+                    <table>
+                        <tr class="calc-button-row">
+                            <td colspan="2" class="buttons">
+                                <button class="calc-button double">C</button>
+                            </td>
+                            <td class="buttons">
+                                <button class="calc-button">&LeftArrow;</button>
+                            </td>
+                            <td class="function_buttons">
+                                <button class="calc-button">&divide;</button>
+                            </td>
+
+                        </tr>
+                        <tr class="calc-button-row">
+                            <td class="buttons">
+                                <button class="calc-button">7</button>
+                            </td>
+                            <td class="buttons">
+                                <button class="calc-button">8</button>
+                            </td>
+                            <td class="buttons">
+                                <button class="calc-button">9</button>
+                            </td>
+                            <td class="function_buttons">
+                                <button class="calc-button">&times;</button>
+                            </td>
+                            </trcalc-button>
+                        <tr class="calc-button-row">
+                            <td class="buttons">
+                                <button class="calc-button">4</button>
+                            </td>
+                            <td class="buttons">
+                                <button class="calc-button">5</button>
+                            </td>
+                            <td class="buttons">
+                                <button class="calc-button">6</button>
+                            </td>
+                            <td class="function_buttons">
+                                <button class="calc-button">&minus;</button>
+                            </td>
+                        </tr>
+                        <tr class="calc-button-row">
+                            <td class="buttons">
+                                <button class="calc-button">1</button>
+                            </td>
+                            <td class="buttons">
+                                <button class="calc-button">2</button>
+                            </td>
+                            <td class="buttons">
+                                <button class="calc-button">3</button>
+                            </td>
+                            <td class="function_buttons">
+                                <button class="calc-button">&plus;</button>
+                            </td>
+                        </tr>
+                        <tr class="calc-button-row">
+                            <td colspan="3" class="buttons Zero">
+                                <button class="calc-button triple">0</button>
+                            </td>
+                            <td class="function_buttons Equal">
+                                <button class="calc-button">&equals;</button>
+                            </td>
+                        </tr>
+                    </table>
+                </section>
+            </div>
+        </div>
     </div>
     <script src="./script.js"></script>
 </body>

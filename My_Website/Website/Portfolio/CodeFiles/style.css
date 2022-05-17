@@ -117,15 +117,65 @@ body {
 /* MainContainer Start */
 .MainContainer {
 	/* border: 3px solid blue; */
-	flex-basis: 85%;
+	flex: 0 0 85%;
 	/* display: none; */
+}
+.Portfolio {
+	/* border: 3px solid red; */
+	padding: 2rem;
+	height: 100vh;
+	font-size: 2rem;
+}
+.Portfolio .Portfolio_Title h1 {
+	margin: 2rem 1rem 5rem 1rem;
+}
+.Portfolio .Portfolio_Title h1 span {
+	/* border: 3px solid blue; */
+	font-size: 5rem;
+	color: black;
+	font-weight: 500;
+	position: relative;
+}
+.Portfolio .Portfolio_Title h1 span::before {
+	position: absolute;
+	content: "";
+	width: 3.8rem;
+	height: 3.8rem;
+	border-left: 5px solid var(--TitlesColor);
+	border-top: 5px solid var(--TitlesColor);
+	border-radius: 0.6rem 0 0rem;
+	top: 0px;
+	left: -1.3rem;
+}
+.Portfolio .Portfolio_Title h1 span::after {
+	content: "";
+	position: absolute;
+	width: 3.8rem;
+	height: 3.8rem;
+	border-bottom: 5px solid var(--TitlesColor);
+	border-right: 5px solid var(--TitlesColor);
+	border-radius: 0rem 0rem 1rem 0rem;
+	bottom: 0px;
+	right: -1.3rem;
+}
+
+.Portfolio_Content h2{
+	/* border: 3px solid blue; */
+	font-size: 2.8rem;
+	font-weight: 300;
+	margin-bottom: 2rem;
+}
+
+.Portfolio_Content h2 span {
+	font-family: "Indie Flower", cursive;
+	color: var(--TitlesColor);
+	font-weight: 500;
 }
 
 
 
-/* MainContainer END */
 
-/* Download CV BUTTON END */
+/* MainContainer END */
 
 .Not_Ready_Yet {
 	font-size: 1.9rem;
