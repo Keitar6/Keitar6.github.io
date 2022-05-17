@@ -1,6 +1,6 @@
 const search = document.querySelector(".Search"); //zapytanie
-const li = document.querySelectorAll("li"); //zapytanie
-const body = document.querySelector("body");
+const li = document.querySelectorAll(".Items"); //zapytanie
+const Drink_Searcher = document.querySelector(".Drink_Searcher");
 const button = document.querySelector("button");
 
 var input = (e) => {
@@ -16,10 +16,10 @@ var input = (e) => {
 };
 
 const DarkMode = () => {
-	if (body.getAttribute("data-mode") === "light") {
-		body.setAttribute("data-mode", "dark");
+	if (Drink_Searcher.getAttribute("data-mode") === "light") {
+		Drink_Searcher.setAttribute("data-mode", "dark");
 	} else {
-		body.setAttribute("data-mode", "light");
+		Drink_Searcher.setAttribute("data-mode", "light");
 	}
 };
 

@@ -116,11 +116,7 @@ body {
 /* ASIDE END */
 
 /* MainContainer Start */
-.MainContainer {
-	/* border: 3px solid blue; */
-	flex: 0 0 85%;
-	/* display: none; */
-}
+
 .Portfolio {
 	/* border: 3px solid red; */
 	display: flex;
@@ -163,8 +159,12 @@ body {
 }
 .Portfolio_Title {
 	flex: 0 0 15%;
+	/* border: 3px solid blue; */
 }
-
+.Portfolio_Content{
+	
+	margin-top: 6rem;
+}
 .Portfolio_Content h2 {
 	/* border: 3px solid blue; */
 	font-size: 2.8rem;
@@ -181,20 +181,20 @@ body {
 .Projects {
 	/* border: 3px solid blue; */
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
 	align-items: center;
-	/* justify-items: center; */
+	justify-items: center;
 	gap: 1rem 1rem;
 }
 
 .Screenshots {
 	/* border: 3px solid var(--NavFonts); */
 	border-radius: 1rem;
-	width: 60%;
+	/* max-width: 26%; */
 }
 .Screenshots img {
 	width: 100%;
-	/* border: 3px solid var(--NavFonts); */
+	border: 3px solid var(--Underlines);
 	border-radius: 1rem;
 }
 .Screenshots a {
@@ -203,8 +203,5 @@ body {
 	padding: 0;
 	/* border: 3px solid var(--NavFonts); */
 	border-radius: 1rem;
-}
-.Drink_Search {
-	grid-row: span 2;
 }
 /* MainContainer END */

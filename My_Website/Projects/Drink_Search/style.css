@@ -1,9 +1,11 @@
-/* * {
+* {
 	box-sizing: border-box;
-	margin: 0px;
-	padding: 0px;
-} */
-
+	margin: 0;
+	padding: 0;
+	outline: none;
+	text-decoration: none;
+	list-style: none;
+}
 :root {
 	--TitlesColor: #ec1839;
 	--AsideBCKG: rgb(238, 232, 232);
@@ -11,76 +13,179 @@
 	--Underlines: rgb(200, 190, 190);
 	--HeaderBCKG: rgb(210, 202, 194);
 }
-body {
-	display: flex;
-	justify-content: center; /*ustawia w jednej osi */
-	align-items: center; /*ustawia w drugiej osi */
-	min-height: 100vh;
-	font-family: "Montserrat", sans-serif;
-	background-color: var(--bg-color);
-	padding: 0;
+::before,
+::after {
+	box-sizing: border-box;
 }
 
-.Wrapper {
-	width: 800px;
+body {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 1.1rem;
+	line-height: 2rem;
+	background-color: black;
+}
+.MainFlexContainer {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	min-height: 100vh;
+	flex-direction: row;
+	/* border: 5px solid red; */
+	background-color: var(--HeaderBCKG);
+}
+
+/* ASIDE START */
+.Aside {
+	/* border: 3px solid blue; */
+	background-color: var(--AsideBCKG);
+	border-right: 1px solid var(--Underlines);
+	flex: 0 0 15%;
+	/* z-index: 10; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.Aside .logo {
+	font-size: 2rem;
+	text-transform: capitalize;
+	position: absolute;
+	top: 4rem;
+}
+.Aside .logo a {
+	color: black;
+	font-size: 2rem;
+
+	padding: 0.7rem 1.3rem;
+	letter-spacing: 0.5rem;
+	position: relative;
+	/* border: 2px solid blue; */
+}
+.Aside .logo a::before {
+	content: "";
+	position: absolute;
+	width: 1.3rem;
+	height: 1.3rem;
+	border-bottom: 3px solid var(--TitlesColor);
+	border-left: 3px solid var(--TitlesColor);
+	border-radius: 0 0rem 0 0.3rem;
+	bottom: 0;
+	left: 0;
+}
+.Aside .logo a::after {
+	content: "";
+	position: absolute;
+	width: 1.3rem;
+	height: 1.3rem;
+	border-top: 3px solid var(--TitlesColor);
+	border-right: 3px solid var(--TitlesColor);
+	border-radius: 0 0.3rem 0 0rem;
+	top: 0;
+	right: 0;
+}
+
+.Aside .logo a span {
+	color: black;
+	font-family: "Indie Flower", cursive;
+	font-size: 2.2rem;
+}
+
+.Aside nav li {
+	/* border: 2px solid blue; */
+	font-size: 1.5rem;
+	font-weight: 600;
+	margin-top: 3rem;
+	border-bottom: 1px solid var(--Underlines);
+}
+.Aside nav li a:hover {
+	color: var(--TitlesColor);
+}
+.Aside nav li a {
+	padding: 1rem 1rem;
+	color: var(--NavFonts);
+}
+.Aside nav li a.ActiveNav {
+	color: var(--TitlesColor);
+}
+.Aside nav li a i {
+	margin-right: 0.8rem;
+}
+/* ASIDE END */
+
+/* Drink Searcher Start */
+.Drink_Searcher_Content {
+	display: flex;
+	width: 50rem;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-family: "Montserrat", sans-serif;
+	padding: 0;
+	margin: 0 0 3rem 0;
+	/* border: 3px solid black; */
 	background-color: var(--bgWrap-color);
-	box-shadow: 00px 00px 100px var(--box-color);
-	border-radius: 100px 100px 0px 0px;
+	border-radius: 1rem;
 	position: relative;
 	padding: 0;
-	/* border: 3px solid black; */
 }
 
-.Header {
+.Drink_Searcher_Content .Header {
+	height: 18rem;
+	/* flex-basis: 40%; */
+	width: 100%;
 	display: flex;
 	justify-content: flex-end;
 	align-items: flex-start;
 	flex-direction: column;
-	height: 400px;
-	padding: 20px 30px;
+	/* height: 20rem; */
+	padding: 2rem 2rem;
 	font-family: "Dancing script", cursive;
 	background-image: url("https://cdn.pixabay.com/photo/2022/02/23/05/10/tiramisu-7030032_960_720.jpg");
 	background-position: center;
-	z-index: 0;
-	border-radius: 80px 80px 0px 0px;
+	border-radius: 1rem 1rem 0 0;
+	/* border: 3px solid black; */
 }
 
-h1 {
+.Drink_Searcher h1 {
 	color: var(--heading-color);
-	margin-bottom: 10px;
+	margin-bottom: 1rem;
 	margin-left: 0;
-	font-size: 60px;
+	font-size: 3rem;
 }
 
-.Search {
+.Drink_Searcher .Search {
 	padding: 10px 20px;
 	margin-bottom: 1px;
 	width: 94%;
 	font-size: 20px;
-	border-radius: 10px;
+	border-radius: 1rem;
 	background-color: var(--bg-color);
 	filter: opacity(70%);
 	font-family: "Times New Roman", Times, serif;
 	color: var(--heading2-color);
 }
 
-.drink_list {
-	padding: 0px 20px 40px 40px;
+.Drink_Searcher .drink_list {
+	/* flex: 0 0 75%; */
+	width: 100%;
+	padding: 0px 20px 20px 40px;
 	font-family: "Times New Roman", Times, serif;
+	position: relative;
+	/* border: 3px solid black; */
 }
 
-.Header_List {
+.Drink_Searcher .Header_List {
 	padding: 30px 0;
 	font-size: 40px;
 	font-style: inherit;
 	color: var(--heading2-color);
 }
 [data-mode="light"] {
-	/*opisanie atrybutu który wczesniej nadalismy */
-	--bg-color: rgb(238, 232, 232);
-	--bgWrap-color: rgb(255, 255, 255); /*background*/
-	--heading-color: beige;
-	--heading2-color: rgb(0, 0, 0);
+	--bg-color: var(--Underlines);
+	--bgWrap-color: var(--AsideBCKG); /*background*/
+	--heading-color: var(--TitlesColor);
+	--heading2-color: var(--NavFonts);
 	--text-color: rgb(65, 65, 65);
 	--link-color: rgb(29, 3, 192);
 	--btn-color: rgb(35, 32, 32);
@@ -95,74 +200,93 @@ h1 {
 	/*opisanie atrybutu który wczesniej nadalismy */
 	--bg-color: rgb(0, 0, 0); /*background*/
 	--bgWrap-color: rgb(0, 0, 0); /*background*/
-	--heading-color: rgb(102, 102, 102);
-	--heading2-color: rgb(255, 255, 255);
-	--text-color: rgb(255, 255, 255);
+	--heading-color: rgb(255, 0, 0);
+	--heading2-color: var(--AsideBCKG);
+	--text-color: var(--AsideBCKG);
 	--link-color: rgb(0, 255, 128);
-	--btn-color: rgb(255, 255, 255);
-	--box-color: rgb(255, 255, 255);
+	--btn-color: var(--AsideBCKG);
+	--box-color: var(--AsideBCKG);
 	--navyBackgr: rgb(86, 84, 84);
 	--navyFont: rgb(0, 0, 0);
-	--navyBorder: rgb(255, 255, 255);
+	--navyBorder: var(--AsideBCKG);
 	--navyHoverFont: rgb(231, 148, 148);
 	--navyHoverBackground: rgb(140, 0, 255);
 }
-ul {
-	padding-bottom: 30px;
+.List ul {
 	font-size: 20px;
 	list-style: none;
+	/* border: 3px solid black; */
 }
-li {
+.List li {
 	padding: 8px 20px;
 	border-bottom: 1px solid var(--bg-color);
 	color: var(--heading2-color);
 }
 
-li:last-child {
+.List li:last-child {
 	border-bottom: 0;
 }
-button {
+.Drink_Searcher button {
 	position: absolute;
-	top: 500px;
-	right: 180px;
-	width: 60px;
-	height: 60px;
+	top: 2rem;
+	left: 43rem;
+	width: 3.8rem;
+	height: 3.8rem;
 	cursor: pointer;
 	border: 1px solid var(--box-color);
-	border-radius: 50px 50px 50px 50px;
+	border-radius: 1rem;
 	background-color: var(--box-color);
 }
-nav ul {
-	padding: 0;
-	/* border: 3px solid black; */
+.Drink_Searcher button:hover {
+	transform: scale(0.8) rotate(15deg);
+	transition: all 0.5s ease;
 }
 
-nav ul li {
-	font-size: 1.5rem;
-	font-weight: bold;
-	background-color: var(--navyBackgr);
-	border-radius: 15px;
-	text-align: center;
-	border: 5px solid black;
-	margin: 1rem;
+/* Drink Searcher END */
+.MainContent {
+	flex: 0 0 85%;
+	/* border: 10px solid blue; */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.Drink_Searcher_Content::before {
+	position: absolute;
+	content: "";
+	width: 3.8rem;
+	height: 3.8rem;
+	border-left: 5px solid var(--TitlesColor);
+	border-top: 5px solid var(--TitlesColor);
+	border-radius: 0.6rem 0 0rem;
+	top: -3rem;
+	left: -3rem;
+}
+.Drink_Searcher_Content::after {
+	content: "";
+	position: absolute;
+	width: 3.8rem;
+	height: 3.8rem;
+	border-bottom: 5px solid var(--TitlesColor);
+	border-right: 5px solid var(--TitlesColor);
+	border-radius: 0rem 0rem 1rem 0rem;
+	bottom: -3rem;
+	right: -3rem;
+}
+header {
 	display: block;
-	padding: 0;
+	/* border: 5px solid blue; */
+	margin: 2rem 1rem 2rem 0rem;
+	align-items: center;
+	font-size: 1.8rem;
+	color: black;
+	font-weight: 500;
+	font-family: "Times New Roman", Times, serif, cursive;
+	letter-spacing: 1px;
+	padding: 2rem;
 }
-nav ul li:last-child {
-	border: 5px solid var(--navyBorder);
-}
-
-a {
-	font-family: "Times New Roman", Times, serif;
-	color: var(--navyFont);
-	text-decoration: none;
-	border-radius: 15px;
-	/* border: 5px dashed rgb(255, 0, 0); */
-	margin: 0;
-	padding: 0;
-	display: block;
-}
-a:hover {
-	background-color: var(--navyHoverBackground);
-	color: var(--navyHoverFont);
+header h1 span {
+	font-family: "Indie Flower", cursive;
+	font-size: 5rem;
+	color: var(--TitlesColor);
 }
