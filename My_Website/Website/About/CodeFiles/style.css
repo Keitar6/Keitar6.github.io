@@ -12,34 +12,21 @@
 	--NavFonts: #302e4d;
 	--Underlines: rgb(200, 190, 190);
 	--HeaderBCKG: rgb(210, 202, 194);
-	/* --TitlesColor: #01403a;
-	--FontsColor: #027368;
-	--DatesColor: rgb(145, 200, 140);
-	--BckgBody: #ffffff;
-	--Borders: #01403a;
-
-	--BckgMainMiddle: #04bfad;
-	--BckgMainSides: rgb(2, 137, 147); */
 }
 ::before,
 ::after {
 	box-sizing: border-box;
 }
 body {
-	font-family: "ar", Times, serif;
+	font-family: "Times New Roman", Times, serif;
 	font-size: 1.1rem;
 	line-height: 2rem;
 	background-color: black;
 }
 
-/* section {
-	min-height: 100vh;
-	display: block;
-} */
-
 .MainFlexContainer {
 	display: flex;
-	width: 80%;
+	width: 100%;
 	min-height: 100vh;
 	flex-direction: row;
 	/* border: 5px solid red; */
@@ -53,7 +40,7 @@ body {
 	/* border: 3px solid blue; */
 	background-color: var(--AsideBCKG);
 	border-right: 1px solid var(--Underlines);
-	flex-basis: 15%;
+	flex: 0 0 15%;
 	/* z-index: 10; */
 	display: flex;
 	justify-content: center;
@@ -70,7 +57,7 @@ body {
 	color: black;
 	font-size: 2rem;
 
-	padding: 10px 20px;
+	padding: 0.7rem 1.3rem;
 	letter-spacing: 0.5rem;
 	position: relative;
 	/* border: 2px solid blue; */
@@ -151,32 +138,31 @@ body {
 	font-size: 5rem;
 	columns: black;
 	font-weight: 500;
-	/* font-family: ; */
 	position: relative;
 }
 .About .About_Title h1 span::before {
 	content: "";
 	position: absolute;
-	width: 60px;
-	height: 60px;
+	width: 3.8rem;
+	height: 3.8rem;
 	/* border-bottom: 5px solid var(--TitlesColor); */
 	border-left: 5px solid var(--TitlesColor);
 	border-top: 5px solid var(--TitlesColor);
 	border-radius: 0.6rem 0 00rem;
 	top: 0px;
-	left: -20px;
+	left: -1.3rem;
 }
 .About .About_Title h1 span::after {
 	content: "";
 	position: absolute;
-	width: 60px;
-	height: 60px;
+	width: 3.8rem;
+	height: 3.8rem;
 	border-bottom: 5px solid var(--TitlesColor);
 	border-right: 5px solid var(--TitlesColor);
 	/* border-top: 5px solid var(--TitlesColor); */
 	border-radius: 0rem 0rem 1rem 0rem;
 	bottom: 0px;
-	right: -20px;
+	right: -1.3rem;
 }
 .About_Content {
 	margin-top: 10rem;
@@ -201,7 +187,6 @@ body {
 	font-weight: 300;
 	color: var(--NavFonts);
 	margin-bottom: 2rem;
-
 	/* border: 3px solid blue; */
 }
 .About_Content .Personals {
@@ -218,7 +203,6 @@ body {
 	flex-basis: 60%;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-
 	align-items: center;
 }
 .Contact_Info .Grid_Item {
@@ -230,9 +214,6 @@ body {
 .Contact_Info .Grid_Item h4 {
 	display: inline;
 	font-weight: 600;
-	/* letter-spacing: 2px; */
-	/* margin-left: 1px; */
-	/* border: 3px solid red; */
 }
 .Contact_Info .Grid_Item p {
 	display: inline;
@@ -241,9 +222,6 @@ body {
 	margin-left: 0.5rem;
 }
 
-/* .Skills {
-	border: 3px solid red;
-} */
 .Skills h4,
 .FatLine {
 	/* border: 3px solid red; */
