@@ -1,12 +1,38 @@
+// Gallery variables start 
 const Center_ImageBox = document.getElementById("Center_ImageBox");
 const Center_Image = document.getElementById("Center_Image");
-// Buttons
 const buttons = document.querySelector(".Buttons");
 const Prev_Button = document.querySelector(".Button_Prev");
 const Button_Forw = document.querySelector(".Button_Forw");
 const Gallery_Images = document.querySelectorAll(".Grid_Item");
-
 let Currently_Selected = "0";
+// Gallery variables end 
+
+
+// Spring logo variables start 
+const { styler, spring, listen, pointer, value } = window.popmotion;
+const Brand = document.querySelector(".Brand");
+const divStyler = styler(Brand);
+const BrandXY = value({ x: 0, y: 0 }, divStyler.set);
+// Spring logo variables end 
+
+// Spring logo start 
+listen(Brand, "mousedown touchstart").start((e) => {
+	e.preventDefault();
+	pointer(BrandXY.get()).start(BrandXY);
+});
+
+listen(document, "mouseup touchend").start(() => {
+	spring({
+		from: BrandXY.get(),
+		velocity: BrandXY.getVelocity(),
+		to: { x: 0, y: 0 },
+		stiffness: 200,
+		mass: 1,
+		damping: 10,
+	}).start(BrandXY);
+});
+// Spring logo end
 
 function Selecting(Classes) {
 	// console.log(Classes, typeof(Classes));

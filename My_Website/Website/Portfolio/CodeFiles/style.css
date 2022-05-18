@@ -92,7 +92,39 @@ body {
 	font-family: "Indie Flower", cursive;
 	font-size: 2.2rem;
 }
-
+.Aside .Main_Nav {
+	margin: 2rem 0 0 0;
+	font-family: "Times New Roman", Times, serif;
+	z-index: 10;
+	position: relative;
+	/* border: 2px solid blue; */
+	display: flex;
+	text-align: center;
+	justify-content: center;
+}
+.Aside .Brand {
+	background-color: var(--Underlines);
+	border-radius: 50%;
+	border: 2px solid var(--NavFonts);
+	width: 85%;
+	color: var(--NavFonts);
+	padding: 0.5rem;
+	font-size: 1.1rem;
+	cursor: -webkit-grab;
+	letter-spacing: .2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.Aside .Brand span {
+	width: 60%;
+	/* border: 2px solid blue; */
+	font-size: 1.5rem;
+	font-weight: 600;
+	font-family: "Indie Flower", cursive;
+	color: var(--TitlesColor);
+}
 .Aside nav li {
 	/* border: 2px solid blue; */
 	font-size: 1.5rem;
