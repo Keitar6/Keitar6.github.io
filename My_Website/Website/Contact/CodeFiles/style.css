@@ -194,10 +194,7 @@ body {
 	bottom: 0px;
 	right: -1.3rem;
 }
-.Contact_Container {
-	text-align: center;
-	justify-content: center;
-}
+
 .Contact_Infos {
 	display: flex;
 	flex-direction: row;
@@ -248,9 +245,56 @@ body {
 	text-align: center;
 	font-size: 2.5rem;
 	margin: 3em 0 1rem 0;
+	position: relative;
 }
 .Contact_Footer_Sub_Title {
 	color: var(--NavFonts);
 	text-align: center;
 	font-size: 1.2rem;
+	position: relative;
+	/* border: 2px solid blue; */
+}
+
+.Contact_Footer_Sub_Title::before {
+	content: "";
+	position: absolute;
+	width: 21.8rem;
+	height: 3.8rem;
+
+	border-bottom: 5px solid var(--TitlesColor);
+	border-radius: 0.6rem 0 00rem;
+	top: 14px;
+	right: 41rem;
+}
+.Contact_Footer_Sub_Title::after {
+	content: "";
+	position: absolute;
+	width: 10rem;
+	height: 3.8rem;
+	border-bottom: 5px solid var(--TitlesColor);
+	border-radius: 0.6rem 0 00rem;
+	top: 29px;
+	right: 47rem;
+}
+.Contact_Footer_Title::before {
+	content: "";
+	position: absolute;
+	width: 40rem;
+	height: 3.8rem;
+
+	border-bottom: 5px solid var(--TitlesColor);
+	border-radius: 0.6rem 0 00rem;
+	top: 30px;
+	right: 33rem;
+}
+.Contact_Footer_Title::after {
+	content: "";
+	position: absolute;
+	width: 30rem;
+	height: 3.8rem;
+
+	border-bottom: 5px solid var(--TitlesColor);
+	border-radius: 0.6rem 0 00rem;
+	top: 45px;
+	right: 37.9rem;
 }
