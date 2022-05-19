@@ -1,22 +1,24 @@
-// Gallery variables start 
+// Gallery variables start
 const Center_ImageBox = document.getElementById("Center_ImageBox");
-const Center_Image = document.getElementById("Center_Image");
+// const Center_Image = document.getElementById("Center_Image");
 const buttons = document.querySelector(".Buttons");
 const Prev_Button = document.querySelector(".Button_Prev");
 const Button_Forw = document.querySelector(".Button_Forw");
 const Gallery_Images = document.querySelectorAll(".Grid_Item");
 let Currently_Selected = "0";
-// Gallery variables end 
+const AnimationTime = 2000;
+const TransitionTime = 500;
+let Temp_Image = "";
+// Gallery variables end
 
-
-// Spring logo variables start 
+// Spring logo variables start
 const { styler, spring, listen, pointer, value } = window.popmotion;
 const Brand = document.querySelector(".Brand");
 const divStyler = styler(Brand);
 const BrandXY = value({ x: 0, y: 0 }, divStyler.set);
-// Spring logo variables end 
+// Spring logo variables end
 
-// Spring logo start 
+// Spring logo start
 listen(Brand, "mousedown touchstart").start((e) => {
 	e.preventDefault();
 	pointer(BrandXY.get()).start(BrandXY);
@@ -33,6 +35,31 @@ listen(document, "mouseup touchend").start(() => {
 	}).start(BrandXY);
 });
 // Spring logo end
+
+function Center_Image_Temp_Allocation(Images) {
+	if (Temp_Image === "") {
+		Temp_Image = document.createElement("img");
+	} else {
+		Temp_Image.src = Images.src;
+		Temp_Image.classList.add("Active");
+		Center_ImageBox.appendChild(Temp_Image);
+	}
+}
+function NextImage(RClick) {
+	Center_ImageBox.removeChild(Temp_Image);
+	Temp_Image.src = Gallery_Images[Currently_Selected].src;
+	Center_ImageBox.appendChild(Temp_Image);
+
+	// Center_ImageBox.src = Gallery_Images[Currently_Selected].src;
+
+	// 	setTimeout(function ()
+	// 	{
+	// 	}, AnimationTime-1000);
+
+	// 	img.src=randomize();
+
+	// setTimeout(NextImage, AnimationTime);
+}
 
 function Selecting(Classes) {
 	// console.log(Classes, typeof(Classes));
@@ -51,19 +78,9 @@ function ButtonsDisable() {
 	} else Button_Forw.disabled = true;
 }
 
-function PicturesSizing() {
-	if (Currently_Selected >= 11) {
-		Center_Image["max-width"] = "42rem";
-		console.log(Center_Image["max-width"]);
-	} else {
-		Center_Image["max-width"] = "45rem";
-		console.log(Center_Image["max-width"]);
-	}
-}
-
 function OpenCenter_IMG(Images) {
 	Selecting(Images.className);
-	Center_Image.src = Images.src;
+	Center_Image_Temp_Allocation(Images);
 	Center_ImageBox.style.display = "flex";
 	buttons.style.display = "block";
 }
@@ -77,15 +94,13 @@ function NextClick(RClick) {
 	// console.log(Gallery_Images);
 	Currently_Selected++;
 	ButtonsDisable();
-	Center_Image.src = Gallery_Images[Currently_Selected].src;
-	PicturesSizing();
+	NextImage(RClick);
 }
 
 function PrevClick(LClick) {
 	Currently_Selected--;
 	ButtonsDisable();
-	Center_Image.src = Gallery_Images[Currently_Selected].src;
-	PicturesSizing();
+	NextImage();
 }
 
 function init() {
