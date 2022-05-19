@@ -260,11 +260,10 @@ body {
 	position: absolute;
 	width: 21.8rem;
 	height: 3.8rem;
-
 	border-bottom: 5px solid var(--TitlesColor);
 	border-radius: 0.6rem 0 00rem;
-	top: 14px;
-	right: 41rem;
+	top: .1rem;
+	right: 40.5%;
 }
 .Contact_Footer_Sub_Title::after {
 	content: "";
@@ -273,19 +272,18 @@ body {
 	height: 3.8rem;
 	border-bottom: 5px solid var(--TitlesColor);
 	border-radius: 0.6rem 0 00rem;
-	top: 29px;
-	right: 47rem;
+	top: 1.2rem;
+	right: 45.5%;
 }
 .Contact_Footer_Title::before {
 	content: "";
 	position: absolute;
 	width: 40rem;
 	height: 3.8rem;
-
 	border-bottom: 5px solid var(--TitlesColor);
 	border-radius: 0.6rem 0 00rem;
-	top: 30px;
-	right: 33rem;
+	top: 2rem;
+	right: 33%;
 }
 .Contact_Footer_Title::after {
 	content: "";
@@ -295,6 +293,64 @@ body {
 
 	border-bottom: 5px solid var(--TitlesColor);
 	border-radius: 0.6rem 0 00rem;
-	top: 45px;
-	right: 37.9rem;
+	top: 3rem;
+	right: 37.2%;
+}
+.Padding_Margin-0{
+	margin: 0;
+	padding: 0;
+
+}
+.MainContainer .contact-form {
+	flex: 0 0 100%;
+	/* max-width: 100%; */
+	padding: 0 1rem 0 1rem;
+	/* border: 2px solid blue; */
+}
+.MainContainer .contact-form .col-5 {
+	flex: 0 0 50%;
+	max-width: 50%;
+	/* background-color: #ec1839; */
+}
+.MainContainer .contact-form .col-10 {
+	flex: 0 0 100%;
+	max-width: 100%;
+	/* background-color: #ec1839; */
+}
+.MainContainer .contact-form .form-item {
+	margin-bottom: 1.5rem;
+	padding: 0 1rem 0 1rem;
+}
+.MainContainer .contact-form .form-item .form-control {
+	width: 100%;
+	height: 4rem;
+	border-radius: 2rem;
+	color: var(--NavFonts);
+	background-color: var(--AsideBCKG);
+	border: 1px solid var(--Underlines);
+	padding: 1rem 2rem;
+	font-size: 1rem;
+	transition: all 0.3s ease;
+}
+.MainContainer .contact-form .form-item .form-control:focus {
+	
+	transform: scale(0.95);
+	transition: all 0.3s ease;
+	box-shadow: 0 0 5rem var(--Underlines);
+	
+}
+.MainContainer .contact-form .form-item textarea.form-control {
+	
+	height: 10rem;
+	
+}
+
+.MainContainer .contact-form button {
+	
+	border: 2px solid blue;
+	padding: 1rem;
+	border: 1px solid var(--Underlines);
+	border-radius: 3rem;
+	background-color: var(--TitlesColor);
+	color: white;
 }

@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Kavivanar|Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Contact</title>
     <link rel="shortcut icon" href="../../HomePage/img/favicon.ico" type="image/x-icon">
@@ -89,16 +90,62 @@
                         </div>
 
                         <h2 class="Contact_Footer_Title"> Contact me as soon as You will have any
-                            <span>questions</span>,
+                            <span>questions</span>
                         </h2>
                         <h3 class="Contact_Footer_Sub_Title">
                             I will answer in the speed of light for sure!
                     </div>
 
+
                 </div>
 
             </section>
+            <form method="POST" action="https://e3vwdl4bpd.execute-api.us-west-2.amazonaws.com/default/API2SES">
+                <div class="row Padding_Margin-0 form">
+                    <div class="contact-form">
+                        <div class="row Padding_Margin-0">
+                            <div class="form-item col-5">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Name" name="name" id="name">
 
+                                </div>
+                            </div>
+                            <div class="form-item col-5">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Email" name="email" id="email">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row Padding_Margin-0">
+                            <div class="form-item col-10">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Subject" name="subject"
+                                        id="subject">
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row Padding_Margin-0">
+                            <div class="contact-form">
+                                <div class="row">
+                                    <div class="form-item col-12">
+                                        <div class="form-group">
+                                            <textarea name="comments" id="comments" class="form-control"
+                                                placeholder="Message"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-item col-12 Form_Button">
+                            <input type="hidden" id="send_to" name="send_to" value="statkprivate@gmail.com">
+                            <button type="submit" class="btn"> Send Me a message!</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
         </div>
         <script src="https://unpkg.com/popmotion@8.5.0/dist/popmotion.global.min.js"></script>
         <script src="script.js"></script>
