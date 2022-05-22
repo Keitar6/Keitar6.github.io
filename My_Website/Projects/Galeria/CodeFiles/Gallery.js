@@ -6,8 +6,6 @@ const Prev_Button = document.querySelector(".Button_Prev");
 const Button_Forw = document.querySelector(".Button_Forw");
 const Gallery_Images = document.querySelectorAll(".Grid_Item");
 let Currently_Selected = "0";
-const AnimationTime = 2000;
-const TransitionTime = 500;
 let Temp_Image = "";
 // Gallery variables end
 
@@ -45,20 +43,10 @@ function Center_Image_Temp_Allocation(Images) {
 		Center_ImageBox.appendChild(Temp_Image);
 	}
 }
-function NextImage(RClick) {
+function NextImage() {
 	Center_ImageBox.removeChild(Temp_Image);
 	Temp_Image.src = Gallery_Images[Currently_Selected].src;
 	Center_ImageBox.appendChild(Temp_Image);
-
-	// Center_ImageBox.src = Gallery_Images[Currently_Selected].src;
-
-	// 	setTimeout(function ()
-	// 	{
-	// 	}, AnimationTime-1000);
-
-	// 	img.src=randomize();
-
-	// setTimeout(NextImage, AnimationTime);
 }
 
 function Selecting(Classes) {
@@ -94,7 +82,7 @@ function NextClick(RClick) {
 	// console.log(Gallery_Images);
 	Currently_Selected++;
 	ButtonsDisable();
-	NextImage(RClick);
+	NextImage();
 }
 
 function PrevClick(LClick) {
