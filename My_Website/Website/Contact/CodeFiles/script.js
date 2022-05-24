@@ -91,7 +91,7 @@ function sendData() {
 	XHR.open(form.getAttribute("method"), form.getAttribute("action"));
 
 	// Add the required HTTP header for form data POST requests
-	XHR.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+	// XHR.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
 	// Finally, send our data.
 	XHR.send(urlEncodedData);
