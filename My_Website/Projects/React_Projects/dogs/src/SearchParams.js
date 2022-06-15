@@ -78,7 +78,7 @@ const SearchParams = () => {
               setBreed(event.target.value);
             }}
           >
-            <option />
+             <option />
             {breeds.map((userBreed) => (
               <option key={userBreed} value={userBreed}>
                 {userBreed}

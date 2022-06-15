@@ -1,10 +1,10 @@
 import { render } from "react-dom";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { StrictMode, useState } from "react";
+import ThemeContext from "./ThemeContext";
 import SearchParams from "./SearchParams";
 import Details from "./Detail";
-import { StrictMode, useState } from "react";
 import Biklak from "./Biklak";
-import ThemeContext from "./ThemeContext";
 // Twworzenie komponentu App --> JSX
 const RApp = () => {
   const theme = useState("#ff4e60");
@@ -16,7 +16,8 @@ const RApp = () => {
             <Link to="/"> Adopt Me! </Link>
           </header>
           <Routes>
-            <Route path="/details/:id" element={<Details />} />
+            <Route path="/details/:id" 
+            element={<Details />} />
             <Route path="/Biklak" element={<Biklak />} />
             <Route path="/" element={<SearchParams />} />
           </Routes>

@@ -24,9 +24,9 @@ class ErrorBoundary extends Component {
     } else if (this.state.hasError) {
       return (
         <h2>
-          There wwas an error. Oh no. What are we going to do. Sike.{" "}
+          There was an error. Oh no. What are we going to do. Sike.{" "}
           <Link to="/">Click here</Link> to go back to the homepage. Or wait
-          five seconds and we wwill do it for you. Or not. I am not your mom.
+          five seconds and we will do it for you. Or not. I am not your mom.
         </h2>
       );
     }
