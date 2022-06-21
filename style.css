@@ -19,14 +19,15 @@
 }
 body {
 	font-family: "Times New Roman", Times, serif;
-	font-size: 1.1rem;
-	line-height: 2rem;
+	font-size: 1rem;
+	line-height: 1.5rem;
 	background-color: black;
 }
 
 .MainFlexContainer {
 	display: flex;
-	width: 100%;
+	width: 100vw;
+	min-height: 100vh;
 	flex-direction: row;
 	/* border: 5px solid red; */
 	background-color: var(--HeaderBCKG);
@@ -39,52 +40,29 @@ body {
 	/* border: 3px solid blue; */
 	background-color: var(--AsideBCKG);
 	border-right: 1px solid var(--Underlines);
-	flex: 0 0 15%;
-	/* z-index: 10; */
+	flex: 1 1 15%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
 .Aside .logo {
+	/* border: 3px solid blue; */
 	font-size: 2rem;
 	text-transform: capitalize;
 	position: absolute;
-	top: 4rem;
+	top: 3rem;
+	padding: 2px 0 0 0;
 }
 .Aside .logo a {
 	color: black;
 	font-size: 2rem;
 
-	padding: 0.7rem 1.3rem;
 	letter-spacing: 0.5rem;
 	position: relative;
+	text-decoration: none;
 	/* border: 2px solid blue; */
 }
-.Aside .logo a::before {
-	content: "";
-	position: absolute;
-	width: 1.3rem;
-	height: 1.3rem;
-	border-bottom: 3px solid var(--TitlesColor);
-	border-left: 3px solid var(--TitlesColor);
-	border-radius: 0 0rem 0 0.3rem;
-
-	bottom: 0;
-	left: 0;
-}
-.Aside .logo a::after {
-	content: "";
-	position: absolute;
-	width: 1.3rem;
-	height: 1.3rem;
-	border-top: 3px solid var(--TitlesColor);
-	border-right: 3px solid var(--TitlesColor);
-	border-radius: 0 0.3rem 0 0rem;
-	top: 0;
-	right: 0;
-}
-
 .Aside .logo a span {
 	color: black;
 	font-family: "Indie Flower", cursive;
@@ -101,21 +79,19 @@ body {
 	text-align: center;
 	justify-content: center;
 }
+
 .Aside .Brand {
 	background-color: var(--Underlines);
 	border-radius: 50%;
 	border: 2px solid var(--NavFonts);
-	width: 85%;
+	width: 10rem;
 	color: var(--NavFonts);
 	padding: 0.5rem;
 	font-size: 1.1rem;
 	cursor: -webkit-grab;
-	letter-spacing: .2rem;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+	letter-spacing: 0.2rem;
 }
+
 .Aside .Brand span {
 	width: 60%;
 	/* border: 2px solid blue; */
@@ -124,10 +100,13 @@ body {
 	font-family: "Indie Flower", cursive;
 	color: var(--TitlesColor);
 }
-
+.Aside nav {
+	position: absolute;
+	top: 13rem;
+}
 .Aside nav li {
 	/* border: 2px solid blue; */
-	font-size: 1.5rem;
+	font-size: 1.2rem;
 	font-weight: 600;
 	margin-top: 3rem;
 	border-bottom: 1px solid var(--Underlines);
@@ -150,21 +129,21 @@ body {
 /* MainContainer Start */
 .MainContainer {
 	/* border: 3px solid black; */
-	flex: 0 0 85%;
+	flex: 1 1 85%;
 }
-header {
-	width: 96%;
+.Content {
+	width: 100%;
 	min-height: 100vh;
-	margin: auto;
+	margin: 0 auto;
 	display: flex;
 	flex-direction: row;
-	/* border: .5rem solid red; */
+	/* border: .2rem solid blue; */
 	align-items: center;
 	/* justify-content: center; */
 }
 .HomePage_Text {
-	flex: 0 0 60%;
-	max-width: 60%;
+	flex: 1 1 60%;
+	/* max-width: 20%; */
 	margin-left: 2rem;
 	margin-bottom: 9rem;
 	/* border: 3px solid black; */
@@ -177,14 +156,14 @@ header {
 }
 
 .Home_Header_Image .Home_Image {
-	flex: 0 0 40%;
+	flex: 1 1 40%;
 	/* max-width: 100%; */
-	width: 20rem;
-	/* border: 10px solid var(--TitlesColor);
-	border-radius: 0 0 30rem 30rem; */
-	margin: 5rem;
+	width: 11rem;
+	/* border: 3px solid var(--TitlesColor); */
+	/* border-radius: 0 0 30rem 30rem; */
+	/* margin: 0rem 5rem 8rem 3rem; */
+	padding: 5px;
 	text-align: center;
-	position: relative;
 	/* border: 1px solid var(--NavFonts); */
 	box-shadow: 0rem 0rem 1rem var(--NavFonts);
 	border-radius: 1rem;
@@ -192,43 +171,66 @@ header {
 .Header_Image {
 	/* border: 5px solid red; */
 	position: relative;
+	padding: 0rem 5rem 8rem 3rem;
 }
 .Header_Image::before {
 	content: "";
 	position: absolute;
-	width: 5rem;
-	height: 5rem;
-	border-top: 10px solid var(--TitlesColor);
-	border-left: 10px solid var(--TitlesColor);
+	width: 3rem;
+	height: 3rem;
+	border-top: 0.3rem solid var(--TitlesColor);
+	border-left: 0.3rem solid var(--TitlesColor);
 	border-radius: 1rem 0rem 0rem 0rem;
-	top: 1.2rem;
-	left: -2rem;
+	top: -2rem;
+	left: 1rem;
 }
 .Header_Image::after {
 	content: "";
 	position: absolute;
-	width: 5rem;
-	height: 5rem;
-	border-bottom: 10px solid var(--TitlesColor);
-	border-right: 10px solid var(--TitlesColor);
+	width: 3rem;
+	height: 3rem;
+	border-bottom: 0.3rem solid var(--TitlesColor);
+	border-right: 0.3rem solid var(--TitlesColor);
 	border-radius: 0rem 0rem 1rem 0rem;
-	bottom: 1.2rem;
-	right: -2rem;
+	bottom: 6rem;
+	right: 3rem;
 }
-.Greetings,
-.Job {
+.Greetings {
+	display: flex;
+	flex-direction: column;
+	font-weight: 100;
 	/* border: 3px solid black; */
-	margin-top: 1rem;
-	font-size: 2rem;
-	margin: 1.5rem 0;
+	line-height: 2rem;
+	font-size: 1.5rem;
+	margin: 2rem 1rem 0rem 1rem;
 }
-.Greetings cite {
-	display: block;
-	font-family: "Indie Flower", cursive;
-	color: var(--TitlesColor);
-	margin-top: 1rem;
+.Greetings p {
+	/* border: 3px solid black; */
+	margin: 1rem 0 0 0;
+	font-size: 1.2rem;
+	line-height: 1.3rem;
 }
 
+.Greetings h1 {
+	/* border: 3px solid black; */
+	font-size: 2.5rem;
+	font-weight: 100;
+}
+.Greetings span {
+	/* border: 3px solid black; */
+	display: inline;
+	font-family: "Indie Flower", cursive;
+	color: var(--TitlesColor);
+	font-size: 3rem;
+}
+
+.Job {
+	/* border: 3px solid black; */
+
+	margin-top: 1rem;
+	font-size: 1.5rem;
+	margin: 1.5rem 0;
+}
 .Job span {
 	font-family: "Indie Flower", cursive;
 	color: var(--TitlesColor);

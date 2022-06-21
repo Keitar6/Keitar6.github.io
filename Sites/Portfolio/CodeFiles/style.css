@@ -20,14 +20,14 @@
 }
 body {
 	font-family: "Times New Roman", Times, serif;
-	font-size: 1.1rem;
-	line-height: 2rem;
+	font-size: 1rem;
+	line-height: 1.5rem;
 	background-color: black;
 }
 
 .MainFlexContainer {
 	display: flex;
-	width: 100%;
+	width: 100vw;
 	min-height: 100vh;
 	flex-direction: row;
 	/* border: 5px solid red; */
@@ -41,57 +41,35 @@ body {
 	/* border: 3px solid blue; */
 	background-color: var(--AsideBCKG);
 	border-right: 1px solid var(--Underlines);
-	flex: 0 0 15%;
-	/* z-index: 10; */
+	flex: 1 1 15%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
 .Aside .logo {
+	/* border: 3px solid blue; */
 	font-size: 2rem;
 	text-transform: capitalize;
 	position: absolute;
-	top: 4rem;
+	top: 3rem;
+	padding: 2px 0 0 0;
 }
 .Aside .logo a {
 	color: black;
 	font-size: 2rem;
 
-	padding: 0.7rem 1.3rem;
 	letter-spacing: 0.5rem;
 	position: relative;
+	text-decoration: none;
 	/* border: 2px solid blue; */
 }
-.Aside .logo a::before {
-	content: "";
-	position: absolute;
-	width: 1.3rem;
-	height: 1.3rem;
-	border-bottom: 3px solid var(--TitlesColor);
-	border-left: 3px solid var(--TitlesColor);
-	border-radius: 0 0rem 0 0.3rem;
-
-	bottom: 0;
-	left: 0;
-}
-.Aside .logo a::after {
-	content: "";
-	position: absolute;
-	width: 1.3rem;
-	height: 1.3rem;
-	border-top: 3px solid var(--TitlesColor);
-	border-right: 3px solid var(--TitlesColor);
-	border-radius: 0 0.3rem 0 0rem;
-	top: 0;
-	right: 0;
-}
-
 .Aside .logo a span {
 	color: black;
 	font-family: "Indie Flower", cursive;
 	font-size: 2.2rem;
 }
+
 .Aside .Main_Nav {
 	margin: 2rem 0 0 0;
 	font-family: "Times New Roman", Times, serif;
@@ -102,21 +80,19 @@ body {
 	text-align: center;
 	justify-content: center;
 }
+
 .Aside .Brand {
 	background-color: var(--Underlines);
 	border-radius: 50%;
 	border: 2px solid var(--NavFonts);
-	width: 85%;
+	width: 10rem;
 	color: var(--NavFonts);
 	padding: 0.5rem;
 	font-size: 1.1rem;
 	cursor: -webkit-grab;
-	letter-spacing: .2rem;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+	letter-spacing: 0.2rem;
 }
+
 .Aside .Brand span {
 	width: 60%;
 	/* border: 2px solid blue; */
@@ -125,9 +101,14 @@ body {
 	font-family: "Indie Flower", cursive;
 	color: var(--TitlesColor);
 }
+.Aside nav {
+	position: absolute;
+	top: 13rem;
+
+}
 .Aside nav li {
 	/* border: 2px solid blue; */
-	font-size: 1.5rem;
+	font-size: 1.2rem;
 	font-weight: 600;
 	margin-top: 3rem;
 	border-bottom: 1px solid var(--Underlines);
@@ -146,8 +127,10 @@ body {
 	margin-right: 0.8rem;
 }
 /* ASIDE END */
-
 /* MainContainer Start */
+.MainContainer{
+	flex: 0 0 85%;
+}
 
 .Portfolio {
 	/* border: 3px solid red; */
@@ -157,49 +140,47 @@ body {
 	height: 100vh;
 	font-size: 2rem;
 }
-.Portfolio .Portfolio_Title h1 {
-	margin: 2rem 1rem 5rem 1rem;
-}
+
 .Portfolio .Portfolio_Title h1 span {
 	/* border: 3px solid blue; */
-	font-size: 5rem;
+	font-size: 3rem;
 	color: black;
 	font-weight: 500;
 	position: relative;
 }
 .Portfolio .Portfolio_Title h1 span::before {
-	position: absolute;
 	content: "";
-	width: 3.8rem;
-	height: 3.8rem;
-	border-left: 5px solid var(--TitlesColor);
-	border-top: 5px solid var(--TitlesColor);
-	border-radius: 0.6rem 0 0rem;
+	position: absolute;
+	width: 2rem;
+	height: 2rem;
+	border-left: 0.2rem solid var(--TitlesColor);
+	border-top: 0.2rem solid var(--TitlesColor);
+	border-radius: 0.6rem 0 00rem;
 	top: 0px;
-	left: -1.3rem;
+	left: -1rem;
 }
 .Portfolio .Portfolio_Title h1 span::after {
 	content: "";
 	position: absolute;
-	width: 3.8rem;
-	height: 3.8rem;
-	border-bottom: 5px solid var(--TitlesColor);
-	border-right: 5px solid var(--TitlesColor);
-	border-radius: 0rem 0rem 1rem 0rem;
+	width: 2rem;
+	height: 2rem;
+	border-bottom: 0.2rem solid var(--TitlesColor);
+	border-right: 0.2rem solid var(--TitlesColor);
+	border-radius: 0rem 0rem 0.6rem 0rem;
 	bottom: 0px;
-	right: -1.3rem;
+	right: -1rem;
 }
 .Portfolio_Title {
 	flex: 0 0 15%;
 	/* border: 3px solid blue; */
 }
-.Portfolio_Content{
-	
+.Portfolio_Content {
+	/* flex: 0 0 85%; */
 	margin-top: 6rem;
 }
 .Portfolio_Content h2 {
 	/* border: 3px solid blue; */
-	font-size: 2.8rem;
+	font-size: 2.3rem;
 	font-weight: 300;
 	margin-bottom: 2rem;
 }

@@ -19,13 +19,14 @@
 }
 body {
 	font-family: "Times New Roman", Times, serif;
-	line-height: 2rem;
+	font-size: 1rem;
+	line-height: 1.5rem;
 	background-color: black;
 }
 
 .MainFlexContainer {
 	display: flex;
-	width: 100%;
+	width: 100vw;
 	min-height: 100vh;
 	flex-direction: row;
 	/* border: 5px solid red; */
@@ -39,57 +40,35 @@ body {
 	/* border: 3px solid blue; */
 	background-color: var(--AsideBCKG);
 	border-right: 1px solid var(--Underlines);
-	flex: 0 0 15%;
-	/* z-index: 10; */
+	flex: 1 1 15%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
 .Aside .logo {
+	/* border: 3px solid blue; */
 	font-size: 2rem;
 	text-transform: capitalize;
 	position: absolute;
-	top: 4rem;
+	top: 3rem;
+	padding: 2px 0 0 0;
 }
 .Aside .logo a {
 	color: black;
 	font-size: 2rem;
 
-	padding: 0.7rem 1.3rem;
 	letter-spacing: 0.5rem;
 	position: relative;
+	text-decoration: none;
 	/* border: 2px solid blue; */
 }
-.Aside .logo a::before {
-	content: "";
-	position: absolute;
-	width: 1.3rem;
-	height: 1.3rem;
-	border-bottom: 3px solid var(--TitlesColor);
-	border-left: 3px solid var(--TitlesColor);
-	border-radius: 0 0rem 0 0.3rem;
-
-	bottom: 0;
-	left: 0;
-}
-.Aside .logo a::after {
-	content: "";
-	position: absolute;
-	width: 1.3rem;
-	height: 1.3rem;
-	border-top: 3px solid var(--TitlesColor);
-	border-right: 3px solid var(--TitlesColor);
-	border-radius: 0 0.3rem 0 0rem;
-	top: 0;
-	right: 0;
-}
-
 .Aside .logo a span {
 	color: black;
 	font-family: "Indie Flower", cursive;
 	font-size: 2.2rem;
 }
+
 .Aside .Main_Nav {
 	margin: 2rem 0 0 0;
 	font-family: "Times New Roman", Times, serif;
@@ -100,22 +79,19 @@ body {
 	text-align: center;
 	justify-content: center;
 }
+
 .Aside .Brand {
 	background-color: var(--Underlines);
 	border-radius: 50%;
 	border: 2px solid var(--NavFonts);
-	width: 85%;
+	width: 10rem;
 	color: var(--NavFonts);
 	padding: 0.5rem;
 	font-size: 1.1rem;
 	cursor: -webkit-grab;
 	letter-spacing: 0.2rem;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	/* border: 2px solid blue; */
 }
+
 .Aside .Brand span {
 	width: 60%;
 	/* border: 2px solid blue; */
@@ -124,9 +100,17 @@ body {
 	font-family: "Indie Flower", cursive;
 	color: var(--TitlesColor);
 }
+.Aside .Brand p {
+	/* border: 2px solid blue; */
+	margin: 0;
+}
+.Aside nav {
+	position: absolute;
+	top: 13rem;
+}
 .Aside nav li {
 	/* border: 2px solid blue; */
-	font-size: 1.5rem;
+	font-size: 1.2rem;
 	font-weight: 600;
 	margin-top: 3rem;
 	border-bottom: 1px solid var(--Underlines);
@@ -157,13 +141,13 @@ body {
 	margin: 0;
 	padding: 0;
 	/* border: 3px solid red; */
-	padding: 2rem 2rem 2rem 2rem;
+	padding: 1rem 2rem 2rem 2rem;
 	height: 100vh;
 	font-size: 2rem;
 }
 .Contact .Contact_Title h1 {
-	font-size: 5rem;
-	margin: 2rem 1rem 12rem 1rem;
+	font-size: 3rem;
+	margin: 0rem 0rem 3rem 0rem;
 	/* border: 3px solid red; */
 }
 .Contact .Contact_Title h1 span {
@@ -175,24 +159,24 @@ body {
 .Contact .Contact_Title h1 span::before {
 	content: "";
 	position: absolute;
-	width: 3.8rem;
-	height: 3.8rem;
-	border-left: 5px solid var(--TitlesColor);
-	border-top: 5px solid var(--TitlesColor);
+	width: 2rem;
+	height: 2rem;
+	border-left: 0.2rem solid var(--TitlesColor);
+	border-top: 0.2rem solid var(--TitlesColor);
 	border-radius: 0.6rem 0 00rem;
 	top: 0px;
-	left: -1.3rem;
+	left: -1rem;
 }
 .Contact .Contact_Title h1 span::after {
 	content: "";
 	position: absolute;
-	width: 3.8rem;
-	height: 3.8rem;
-	border-bottom: 5px solid var(--TitlesColor);
-	border-right: 5px solid var(--TitlesColor);
-	border-radius: 0rem 0rem 1rem 0rem;
+	width: 2rem;
+	height: 2rem;
+	border-bottom: 0.2rem solid var(--TitlesColor);
+	border-right: 0.2rem solid var(--TitlesColor);
+	border-radius: 0rem 0rem 0.6rem 0rem;
 	bottom: 0px;
-	right: -1.3rem;
+	right: -1rem;
 }
 
 .Contact_Infos {
@@ -244,7 +228,7 @@ body {
 	color: var(--TitlesColor);
 	text-align: center;
 	font-size: 2.5rem;
-	margin: 3em 0 1rem 0;
+	margin: 3rem 0 1rem 0;
 	position: relative;
 }
 .Contact_Footer_Sub_Title {
@@ -258,48 +242,46 @@ body {
 .Contact_Footer_Sub_Title::before {
 	content: "";
 	position: absolute;
-	width: 21.8rem;
-	height: 3.8rem;
+	width: 30%;
+	height: 3.1rem;
 	border-bottom: 5px solid var(--TitlesColor);
 	border-radius: 0.6rem 0 00rem;
-	top: .1rem;
-	right: 40.5%;
+	top: 0.1rem;
+	right: 35%;
 }
 .Contact_Footer_Sub_Title::after {
 	content: "";
 	position: absolute;
-	width: 10rem;
-	height: 3.8rem;
+	width: 15%;
+	height: 2.7rem;
 	border-bottom: 5px solid var(--TitlesColor);
 	border-radius: 0.6rem 0 00rem;
 	top: 1.2rem;
-	right: 45.5%;
+	right: 42.5%;
 }
 .Contact_Footer_Title::before {
 	content: "";
 	position: absolute;
-	width: 40rem;
+	width: 60%;
 	height: 3.8rem;
 	border-bottom: 5px solid var(--TitlesColor);
 	border-radius: 0.6rem 0 00rem;
 	top: 2rem;
-	right: 33%;
+	right: 20%;
 }
 .Contact_Footer_Title::after {
 	content: "";
 	position: absolute;
-	width: 30rem;
-	height: 3.8rem;
-
+	width: 45%;
+	height: 3.5rem;
 	border-bottom: 5px solid var(--TitlesColor);
 	border-radius: 0.6rem 0 00rem;
 	top: 3rem;
-	right: 37.2%;
+	right: 27.5%;
 }
-.Padding_Margin-0{
+.Padding_Margin-0 {
 	margin: 0;
 	padding: 0;
-
 }
 .MainContainer .contact-form {
 	flex: 0 0 100%;
@@ -333,24 +315,30 @@ body {
 	transition: all 0.3s ease;
 }
 .MainContainer .contact-form .form-item .form-control:focus {
-	
 	transform: scale(1.02);
 	transition: all 0.3s ease;
 	box-shadow: 0 0 5rem var(--Underlines);
-	
 }
 .MainContainer .contact-form .form-item textarea.form-control {
-	
 	height: 10rem;
-	
 }
 
-.MainContainer .contact-form button {
-	
-	border: 2px solid blue;
+.MainContainer .Form_Button button {
+	/* border: 2px solid blue; */
 	padding: 1rem;
-	border: 1px solid var(--Underlines);
+	margin: 0 1rem;
+	/* border: 1px solid var(--NavFonts); */
 	border-radius: 3rem;
 	background-color: var(--TitlesColor);
 	color: white;
+}
+.MainContainer .Form_Button button:hover {
+	/* border: 2px solid blue; */
+	padding: 1rem;
+	margin: 0 1rem;
+	/* border: 1px solid var(--Underlines); */
+	border-radius: 3rem;
+	transform: scale(1.05), 1s ease;
+	background-color: var(--TitlesColor);
+	color: black;
 }
