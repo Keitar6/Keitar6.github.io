@@ -334,7 +334,7 @@ body {
 }
 .MainContainer .contact-form .form-item .form-control:focus {
 	
-	transform: scale(0.95);
+	transform: scale(1.02);
 	transition: all 0.3s ease;
 	box-shadow: 0 0 5rem var(--Underlines);
 	
