@@ -20,25 +20,32 @@
 
 body {
 	font-family: "Times New Roman", Times, serif;
-	font-size: 1.1rem;
-	line-height: 2rem;
+	font-size: 1rem;
+	line-height: 1.5rem;
 	background-color: black;
 }
-.MainFlexContainer {
-	margin: 0;
-	padding: 0;
+.MainContent {
+	flex: 1 1 85%;
+	/* border: 10px solid blue; */
 	display: flex;
-	width: 100%;
+	flex-direction: column;
+	/* justify-content: center; */
+	align-items: center;
+}
+.MainFlexContainer {
+	display: flex;
+	width: 100vw;
 	min-height: 100vh;
 	flex-direction: row;
 	/* border: 5px solid red; */
 	background-color: var(--HeaderBCKG);
+	margin: 0 auto;
 }
 .Calculator {
-	padding: 0%;
-	width: 25rem;
-	height: 50vh;
-	margin-top: 15vh;
+	padding: 0;
+	width: 17rem;
+	/* height: 50vh; */
+	/* margin-top: 15vh; */
 	background-color: black;
 	display: flex;
 	flex-direction: column;
@@ -144,57 +151,35 @@ button {
 	/* border: 3px solid blue; */
 	background-color: var(--AsideBCKG);
 	border-right: 1px solid var(--Underlines);
-	flex: 0 0 15%;
-	/* z-index: 10; */
+	flex: 1 1 15%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
 .Aside .logo {
+	/* border: 3px solid blue; */
 	font-size: 2rem;
 	text-transform: capitalize;
 	position: absolute;
-	top: 4rem;
+	top: 3rem;
+	padding: 2px 0 0 0;
 }
 .Aside .logo a {
 	color: black;
 	font-size: 2rem;
-
-	padding: 0.7rem 1.3rem;
+	
 	letter-spacing: 0.5rem;
 	position: relative;
+	text-decoration: none;
 	/* border: 2px solid blue; */
 }
-.Aside .logo a::before {
-	content: "";
-	position: absolute;
-	width: 1.3rem;
-	height: 1.3rem;
-	border-bottom: 3px solid var(--TitlesColor);
-	border-left: 3px solid var(--TitlesColor);
-	border-radius: 0 0rem 0 0.3rem;
-
-	bottom: 0;
-	left: 0;
-}
-.Aside .logo a::after {
-	content: "";
-	position: absolute;
-	width: 1.3rem;
-	height: 1.3rem;
-	border-top: 3px solid var(--TitlesColor);
-	border-right: 3px solid var(--TitlesColor);
-	border-radius: 0 0.3rem 0 0rem;
-	top: 0;
-	right: 0;
-}
-
 .Aside .logo a span {
 	color: black;
 	font-family: "Indie Flower", cursive;
 	font-size: 2.2rem;
 }
+
 .Aside .Main_Nav {
 	margin: 2rem 0 0 0;
 	font-family: "Times New Roman", Times, serif;
@@ -205,21 +190,19 @@ button {
 	text-align: center;
 	justify-content: center;
 }
+
 .Aside .Brand {
 	background-color: var(--Underlines);
 	border-radius: 50%;
 	border: 2px solid var(--NavFonts);
-	width: 85%;
+	width: 10rem;
 	color: var(--NavFonts);
 	padding: 0.5rem;
 	font-size: 1.1rem;
 	cursor: -webkit-grab;
-	letter-spacing: .2rem;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+	letter-spacing: 0.2rem;
 }
+
 .Aside .Brand span {
 	width: 60%;
 	/* border: 2px solid blue; */
@@ -228,9 +211,13 @@ button {
 	font-family: "Indie Flower", cursive;
 	color: var(--TitlesColor);
 }
+.Aside nav {
+	position: absolute;
+	top: 13rem;
+}
 .Aside nav li {
 	/* border: 2px solid blue; */
-	font-size: 1.5rem;
+	font-size: 1.2rem;
 	font-weight: 600;
 	margin-top: 3rem;
 	border-bottom: 1px solid var(--Underlines);
@@ -249,28 +236,23 @@ button {
 	margin-right: 0.8rem;
 }
 /* ASIDE END */
-.MainContent {
-	flex: 0 0 85%;
-	/* border: 10px solid blue; */
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
+
 header {
 	display: block;
 	/* border: 5px solid blue; */
-	margin: 2rem 1rem 5rem 0rem;
+	margin: 2rem 1rem 5rem 1rem;
 	align-items: center;
 	font-size: 1.8rem;
 	color: black;
-	font-weight: 500;
+	font-weight: 400;
+	font-size: 1.2rem;
+	line-height: 2.5rem;
 	font-family: "Times New Roman", Times, serif, cursive;
 	letter-spacing: 1px;
 	padding: 2rem;
 }
 header h1 span {
 	font-family: "Indie Flower", cursive;
-	font-size: 5rem;
+	font-size: 3rem;
 	color: var(--TitlesColor);
 }
